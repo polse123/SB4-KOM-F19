@@ -16,7 +16,8 @@ import dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game implements ApplicationListener {
+public class Game
+        implements ApplicationListener {
 
     private static OrthographicCamera cam;
     private ShapeRenderer sr;
@@ -41,7 +42,7 @@ public class Game implements ApplicationListener {
         Gdx.input.setInputProcessor(
                 new GameInputProcessor(gameData)
         );
-        
+
         IGamePluginService playerPlugin = new PlayerPlugin();
         IEntityProcessingService playerProcess = new PlayerControlSystem();
         entityPlugins.add(playerPlugin);
@@ -71,9 +72,7 @@ public class Game implements ApplicationListener {
     private void update() {
         // Update
         for (IEntityProcessingService entityProcessorService : entityProcessors) {
-            for (Entity e : world.getEntities()) {
-                entityProcessorService.process(gameData, world);
-            }
+            entityProcessorService.process(gameData, world);
         }
     }
 
