@@ -27,11 +27,6 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCommon</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>OSGiCommonAsteroids</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -42,7 +37,6 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
             </plugin>
         </plugins>
     </build>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dk.sdu.mmmi.cbse</groupId>
@@ -29,31 +28,12 @@
         </dependency>
 
 
+
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCommon</artifactId>
+            <artifactId>OSGiEnemy</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCommonBullet</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-<!--        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCommonEnemy</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCommonAsteroids</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!--        <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>OSGiEnemy</artifactId>
-                    <version>${project.version}</version>
-                </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>OSGiAsteroids</artifactId>
@@ -67,11 +47,6 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>OSGiCore</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiUpdater</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
