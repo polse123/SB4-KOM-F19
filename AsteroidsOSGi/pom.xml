@@ -33,6 +33,9 @@
                     <configuration>
                         <brandingToken>${brandingToken}</brandingToken>
                         <cluster>${brandingToken}</cluster>
+                        <additionalArguments>
+                            -J-XX:MaxPermSize=256m -J-Xmx512m  --nosplash
+                        </additionalArguments>
                     </configuration>
                 </plugin>
                 <plugin>

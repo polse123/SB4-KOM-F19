@@ -12,11 +12,7 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import org.osgi.framework.Bundle;
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.BundleException;
-import org.osgi.framework.FrameworkListener;
+import org.osgi.framework.*;
 import org.osgi.framework.wiring.FrameworkWiring;
 
 public class Updater implements BundleActivator {
@@ -149,7 +145,7 @@ public class Updater implements BundleActivator {
 
     private Bundle findBundleFromFilename(String filename) {
         for (Bundle bundle : getBundles()) {
-            if (filename.startsWith(bundle.getSymbolicName())) {
+            if (bundle.getSymbolicName().contains(filename.substring(0, filename.indexOf("-")))) {
                 return bundle;
             }
         }
