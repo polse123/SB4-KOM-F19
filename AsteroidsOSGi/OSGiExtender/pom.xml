@@ -27,8 +27,6 @@
             <version>1.0.500</version>
         </dependency>
 
-
-
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>OSGiEnemy</artifactId>

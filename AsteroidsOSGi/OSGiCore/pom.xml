@@ -44,8 +44,6 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>dk.sdu.mmmi.cbse.Activator</Bundle-Activator>
-                        <Export-Package />
                     </instructions>
                 </configuration>
             </plugin>

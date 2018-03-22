@@ -34,6 +34,7 @@
                         <brandingToken>${brandingToken}</brandingToken>
                         <cluster>${brandingToken}</cluster>
                         <additionalArguments>
+                            <!--                            -J-Xdebug -J-Xrunjdwp:transport=dt_socket,suspend=n,server=y,address=5005  -->
                             -J-XX:MaxPermSize=256m -J-Xmx512m  --nosplash
                         </additionalArguments>
                     </configuration>
