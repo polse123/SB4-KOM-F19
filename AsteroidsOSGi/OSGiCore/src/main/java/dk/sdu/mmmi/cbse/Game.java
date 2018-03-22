@@ -14,7 +14,6 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.core.managers.GameInputProcessor;
-
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -28,11 +27,12 @@ public class Game implements ApplicationListener {
     private static final List<IGamePluginService> gamePluginList = new CopyOnWriteArrayList<>();
     private static List<IPostEntityProcessingService> postEntityProcessorList = new CopyOnWriteArrayList<>();
 
-    public Game() {
+    public Game(){
         init();
     }
 
     private void init() {
+
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
         cfg.title = "Asteroids";
         cfg.width = 800;
@@ -93,8 +93,8 @@ public class Game implements ApplicationListener {
             float[] shapey = entity.getShapeY();
 
             for (int i = 0, j = shapex.length - 1;
-                 i < shapex.length;
-                 j = i++) {
+                    i < shapex.length;
+                    j = i++) {
 
                 sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
             }

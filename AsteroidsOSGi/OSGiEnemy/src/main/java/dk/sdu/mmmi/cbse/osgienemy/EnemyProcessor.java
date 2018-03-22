@@ -8,10 +8,6 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.enemy.Enemy;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
-import static java.lang.Math.sqrt;
-import org.openide.util.Lookup;
 
 public class EnemyProcessor implements IEntityProcessingService {
 
@@ -30,8 +26,7 @@ public class EnemyProcessor implements IEntityProcessingService {
             movingPart.setRight(random > 0.3 && random < 0.5);
             movingPart.setUp(random > 0.7 && random < 0.9);
             
-            if (random > 0.98 && bulletService != null) {
-                System.out.println("Shooting");
+            if (random > 0.98) {
                 Entity bullet = bulletService.createBullet(entity, gameData);
                 world.addEntity(bullet);
             }
@@ -70,5 +65,9 @@ public class EnemyProcessor implements IEntityProcessingService {
     //TODO: Dependency injection via Declarative Services
     public void setBulletService(BulletSPI bulletService) {
         this.bulletService = bulletService;
+    }
+
+    public void removeBulletService() {
+        this.bulletService = null;
     }
 }
