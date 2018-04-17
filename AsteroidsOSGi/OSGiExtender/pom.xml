@@ -27,10 +27,26 @@
             <version>1.0.500</version>
         </dependency>
 
-
+        <!--
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>OSGiLaser</artifactId>
+            <version>${project.version}</version>
+        </dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>${project.groupId}</groupId>-->
+            <!--<artifactId>OSGiEnemy</artifactId>-->
+            <!--<version>${project.version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>OSGiCore</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>OSGiLibGDX</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -50,7 +66,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>OSGiCore</artifactId>
+            <artifactId>OSGiLaser</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
