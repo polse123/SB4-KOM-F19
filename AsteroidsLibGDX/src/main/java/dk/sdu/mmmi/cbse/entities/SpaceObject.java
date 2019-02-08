@@ -1,8 +1,9 @@
 package dk.sdu.mmmi.cbse.entities;
 
 import dk.sdu.mmmi.cbse.main.Game;
+import javax.swing.JFrame;
 
-public class SpaceObject {
+public class SpaceObject extends JFrame {
 	
 	protected float x;
 	protected float y;
